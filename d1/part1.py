@@ -1,8 +1,16 @@
-f = open('/home/hugo/Lukio/IBY1/CAS/adventOfCode/d1/input.txt', 'r')
+# Open file with input inside
+
+f = open('./input.txt', 'r')
 data = f.readlines()
+
+# Convert the list of strings to a list of integers
 
 for t in enumerate(data):
 	data[t[0]] = int(data[t[0]].split("\n")[0])
+
+# A function to go through the list of integers to
+# find a pair that will sum to 2020, then return
+# that integer pair's product.
 
 def find2020mult(data):
 	while len(data) != 0:
